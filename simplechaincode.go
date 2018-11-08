@@ -27,7 +27,7 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 		logger.Info(args[3])
 	}
 	A = args[0]
-	Aval = strconv.Atoi(args1)
+	Aval = strconv.Atoi(args[1])
 	if err != nil{
 		return logger.Error("Expecting integer value for asset holding")
 	}
