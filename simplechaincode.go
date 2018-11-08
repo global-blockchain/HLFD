@@ -1,6 +1,7 @@
 package main
 import(
 	"fmt"
+	"strconv"
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	pb "github.com/hyperledger/fabric/protos/peer"
 )
@@ -19,7 +20,7 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 
 	var err error*/
 	if len(args)!=4{
-		return shim.Error(len(args))
+		return shim.Error(strconv.Itoa(len(args)))
 	}else{
 		logger.Info("Number of arguments is 4")
 		logger.Info(args[0])
