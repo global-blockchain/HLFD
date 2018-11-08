@@ -13,22 +13,23 @@ type simplechaincode struct {
 func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 	fmt.Println("<< ===== success init it is view in docker ==========>>")
 	_, args := stub.GetFunctionAndParameters()
+	var logger = shim.NewLogger("simplechaincode")
 	var A, B string
 	var Aval, Bval int
 	var err error
 	if len(args)!=4{
-		return shim.Error("Incorrect number of arguments, Expecting 4")
+		return logger.Error("Incorrect number of arguments, Expecting 4")
 	}else{
-		shim.Info("Number of arguments is 4")
-		shim.Info(args[0])
-		shim.Info(args[1])
-		shim.Info(args[2])
-		shim.Info(args[3])
+		logger.Info("Number of arguments is 4")
+		logger.Info(args[0])
+		logger.Info(args[1])
+		logger.Info(args[2])
+		logger.Info(args[3])
 	}
 	A = args[0]
 	Aval = strconv.Atoi(args1)
 	if err != nil{
-		return shim.Error("Expecting integer value for asset holding")
+		return logger.Error("Expecting integer value for asset holding")
 	}
 
 
