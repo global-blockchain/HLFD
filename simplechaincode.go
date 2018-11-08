@@ -1,6 +1,7 @@
 package main
 import(
 	"fmt"
+	"strconv"
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	pb "github.com/hyperledger/fabric/protos/peer"
 )
@@ -11,6 +12,27 @@ type simplechaincode struct {
 
 func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 	fmt.Println("<< ===== success init it is view in docker ==========>>")
+	_, args := stub.GetFunctionAndParameters()
+	var A, B string
+	var Aval, Bval int
+	var err error
+	if len(args)!==4{
+		return shim.error("Incorrect number of arguments, Expecting 4")
+	}else{
+		shim.Info("Number of arguments is 4")
+		shim.info(args[0])
+		shim.info(args[1])
+		shim.info(args[2])
+		shim.info(args[3])
+	}
+	A = args[0]
+	Aval strconv.Atoi(args1)
+	if err != nil{
+		return shim.error("Expecting integer value for asset holding")
+	}
+
+
+
 	return shim.Success([] byte("success init"))
 }
 
