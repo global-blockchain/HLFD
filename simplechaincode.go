@@ -17,10 +17,10 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 	var Aval, Bval int
 	var err error
 	if len(args)!=4{
-		return shim.rror("Incorrect number of arguments, Expecting 4")
+		return shim.Error("Incorrect number of arguments, Expecting 4")
 	}else{
 		shim.Info("Number of arguments is 4")
-		shim.nfo(args[0])I
+		shim.Info(args[0])I
 		shim.Info(args[1])
 		shim.Info(args[2])
 		shim.Info(args[3])
