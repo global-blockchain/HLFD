@@ -18,7 +18,7 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 	var Aval, Bval int
 	var err error
 	if len(args)!=4{
-		return logger.Error("Incorrect number of arguments, Expecting 4")
+		return shim.Error("Incorrect number of arguments, Expecting 4")
 	}else{
 		logger.Info("Number of arguments is 4")
 		logger.Info(args[0])
@@ -29,7 +29,7 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 	A = args[0]
 	Aval, err = strconv.Atoi(args[1])
 	if err != nil{
-		return logger.Error("Expecting integer value for asset holding")
+		return shim.Error("Expecting integer value for asset holding")
 	}
 
 
