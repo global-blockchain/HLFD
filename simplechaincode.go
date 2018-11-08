@@ -1,7 +1,6 @@
 package main
 import(
 	"fmt"
-	"strconv"
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	pb "github.com/hyperledger/fabric/protos/peer"
 )
