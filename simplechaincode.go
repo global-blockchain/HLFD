@@ -28,12 +28,13 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 		logger.Info(args[2])
 		logger.Info(args[3])
 	}
+	/*
 	A = args[0]
 	Aval, err = strconv.Atoi(args[1])
 	if err != nil{
 		return shim.Error("Expecting integer value for asset holding")
 	}
-
+*/
 
 
 	return shim.Success([] byte("success init"))
