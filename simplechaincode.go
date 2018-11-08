@@ -20,7 +20,7 @@ func (t *simplechaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response{
 	/*_,args := stub.GetFunctionAndParameters();
 	var a_parm = args[0]
 	var b_parm = args[1]
-	var c_parm = args[2]
+	var c_parm = args[2]*/
 	var logger = shim.NewLogger("simplechaincode")
 	logger.Info("================================================just for test================================")
 	/*logger.info("args0:%s",a_parm)
