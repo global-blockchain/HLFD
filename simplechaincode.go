@@ -20,7 +20,7 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 
 	var err error*/
 	if len(args)!=4{
-		return shim.Error(strconv.Itoa(len(args)))
+		return shim.Error(args[2])
 	}else{
 		logger.Info("Number of arguments is 4")
 		logger.Info(args[0])
