@@ -23,6 +23,7 @@ func (t *simplechaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response{
 	var c_parm = args[2]*/
 	var logger = shim.NewLogger("simplechaincode")
 	logger.Info("================================================just for test================================")
+	logger.Warning("----------------------------------test Warning--------------------------------------------")
 	/*logger.info("args0:%s",a_parm)
 	logger.info("args1:%s",b_parm)
 	logger.info("args2:%s",c_parm)*/
