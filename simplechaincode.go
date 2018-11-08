@@ -23,10 +23,10 @@ func (t *simplechaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response{
 	var c_parm = args[2]
 	var logger = shim.NewLogger("simplechaincode")
 	logger.info("================================================just for test================================")
-	logger.info("args0:%s",a_parm)
+	/*logger.info("args0:%s",a_parm)
 	logger.info("args1:%s",b_parm)
-	logger.info("args2:%s",c_parm)
-	
+	logger.info("args2:%s",c_parm)*/
+
 	return shim.Success([] byte("Success invoke"))
 }
 
