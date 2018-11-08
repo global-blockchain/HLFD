@@ -14,8 +14,10 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 	fmt.Println("<< ===== success init it is view in docker ==========>>")
 	_, args := stub.GetFunctionAndParameters()
 	var logger = shim.NewLogger("simplechaincode")
+	/*
 	var A, B string
 	var Aval, Bval int
+	*/
 	var err error
 	if len(args)!=4{
 		return shim.Error("Incorrect number of arguments, Expecting 4")
