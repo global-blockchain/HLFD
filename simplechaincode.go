@@ -20,13 +20,13 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 		return shim.Error("Incorrect number of arguments, Expecting 4")
 	}else{
 		shim.Info("Number of arguments is 4")
-		shim.Info(args[0])I
+		shim.Info(args[0])
 		shim.Info(args[1])
 		shim.Info(args[2])
 		shim.Info(args[3])
 	}
 	A = args[0]
-	Aval strconv.Atoi(args1)
+	Aval = strconv.Atoi(args1)
 	if err != nil{
 		return shim.Error("Expecting integer value for asset holding")
 	}
