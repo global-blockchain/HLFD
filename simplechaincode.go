@@ -16,7 +16,7 @@ func (t *simplechaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 
 func (t *simplechaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response{
 	fmt.Println("======= Invoke function is call successfully ========")
-
+/*
 	_,args := stub.GetFunctionAndParameters();
 	var a_parm = args[0]
 	var b_parm = args[1]
